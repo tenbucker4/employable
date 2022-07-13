@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import General from "./components/General";
 
 class App extends Component {
     constructor() {
@@ -8,7 +9,11 @@ class App extends Component {
     }
 
     render() {
-        return;
+        return (
+            <div>
+                <General />
+            </div>
+        );
     }
 }
 
