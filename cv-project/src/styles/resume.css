@@ -1,5 +1,55 @@
 .resume-bin {
     width: 90%;
-    height: 50vh;
+    height: 70vh;
     border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.resume-bin header {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    padding: 1.5rem 0rem;
+    border-bottom: 3px solid blue;
+}
+
+.heading {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.heading h2 {
+    color: rgb(84, 83, 83);
+}
+
+ul {
+    list-style: none;
+    line-height: 2rem;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+li img {
+    width: 1.5rem;
+    height: auto;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    padding-top: 1.5rem;
+    gap: 0.5rem;
+}
+
+.education-entry {
+    display: flex;
+    justify-content: space-between;
 }

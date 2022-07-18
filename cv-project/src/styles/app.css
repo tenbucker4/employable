@@ -17,3 +17,9 @@
     align-items: center;
     gap: 2rem;
 }
+
+.cv-display {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
