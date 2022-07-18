@@ -6,11 +6,30 @@ import Resume from "./components/Resume";
 import "./styles/app.css";
 
 class App extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
 
-        this.state = {};
+        this.state = {
+            personalDetails: {
+                name: "Ben Tucker",
+                title: "",
+                phone: "",
+                email: "",
+            },
+            education: [],
+            experience: [],
+        };
+
+        this.handleChange = this.handleChange.bind(this);
     }
+
+    handleChange = (e) => {
+        this.setState({
+            personalDetails: {
+                name: e.target.value,
+            },
+        });
+    };
 
     render() {
         return (

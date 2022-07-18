@@ -1,6 +1,8 @@
 import React from "react";
 
 const General = (props) => {
+    const { personalDetails } = props;
+
     return (
         <form>
             <label htmlFor="userName">Your Name</label>
