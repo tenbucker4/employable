@@ -37,7 +37,7 @@ li {
 }
 
 li img {
-    width: 1.5rem;
+    width: 1.3rem;
     height: auto;
 }
 
@@ -52,4 +52,34 @@ section {
 .education-entry {
     display: flex;
     justify-content: space-between;
+}
+
+.work-section {
+    gap: 1rem;
+}
+
+.work-entry {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.work-heading {
+    display: flex;
+    justify-content: space-between;
+}
+
+.work-details {
+    text-align: justify;
+}
+
+footer {
+    justify-content: center;
+    width: 90%;
+    margin-top: auto;
+    display: flex;
+    gap: 1rem;
+    padding: 0.5rem 0rem;
+    color: rgb(84, 83, 83);
+    border-top: 1px solid rgb(84, 83, 83);
 }

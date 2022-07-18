@@ -43,6 +43,50 @@ const Resume = (props) => {
                     </p>
                 </div>
             </section>
+            <section className="work-section">
+                <h3>Work Experience</h3>
+                <div className="work-entry">
+                    <div className="work-heading">
+                        <p>Analytical Chemist</p>
+                        <p>
+                            Toronto Research Chemicals |{" "}
+                            <span>2020 - 2021</span>
+                        </p>
+                    </div>
+                    <div className="work-details">
+                        Cupidatat sunt anim incididunt nisi labore sunt nulla
+                        Lorem elit irure. Aliquip quis excepteur et nostrud enim
+                        irure nostrud officia. Et deserunt et aliquip voluptate
+                        elit cupidatat. Adipisicing enim minim do anim eiusmod
+                        est. Irure laboris anim voluptate proident. Cillum
+                        reprehenderit est magna minim. Nostrud ex aute laborum
+                        ea irure amet ea ipsum ut non minim anim nisi.
+                    </div>
+                </div>
+                <div className="work-entry">
+                    <div className="work-heading">
+                        <p>Analytical Chemist</p>
+                        <p>
+                            Toronto Research Chemicals |{" "}
+                            <span>2020 - 2021</span>
+                        </p>
+                    </div>
+                    <div className="work-details">
+                        Cupidatat sunt anim incididunt nisi labore sunt nulla
+                        Lorem elit irure. Aliquip quis excepteur et nostrud enim
+                        irure nostrud officia. Et deserunt et aliquip voluptate
+                        elit cupidatat. Adipisicing enim minim do anim eiusmod
+                        est. Irure laboris anim voluptate proident. Cillum
+                        reprehenderit est magna minim. Nostrud ex aute laborum
+                        ea irure amet ea ipsum ut non minim anim nisi.
+                    </div>
+                </div>
+            </section>
+            <footer>
+                <p>Ben Tucker</p>
+                <p>778-555-5555</p>
+                <p>bwtucker4@gmail.com</p>
+            </footer>
         </div>
     );
 };
