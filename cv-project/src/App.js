@@ -29,13 +29,14 @@ class App extends Component {
                 name: e.target.value,
             },
         });
+        console.log("hi");
     };
 
     render() {
         return (
             <div className="container">
                 <div className="cv-form">
-                    <General />
+                    <General onChange={this.handleChange} />
                     <Education />
                     <Work />
                 </div>
