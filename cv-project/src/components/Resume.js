@@ -11,18 +11,18 @@ class Resume extends Component {
             <div className="resume-bin">
                 <header>
                     <div className="heading">
-                        <h1>Ben Tucker</h1>
-                        <h2>Software Developer</h2>
+                        <h1>{this.props.name}</h1>
+                        <h2>{this.props.title}</h2>
                     </div>
                     <div className="contact-details">
                         <ul>
                             <li>
                                 <img src={require("../images/phone.png")} />
-                                778-555-5555
+                                {this.props.phone}
                             </li>
                             <li>
                                 <img src={require("../images/email.png")} />
-                                bwtucker4@gmail.com
+                                {this.props.email}
                             </li>
                         </ul>
                     </div>

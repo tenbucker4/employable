@@ -4,6 +4,7 @@ import Education from "./components/Education";
 import Work from "./components/Work";
 import Resume from "./components/Resume";
 import "./styles/app.css";
+import { toHaveStyle } from "@testing-library/jest-dom/dist/matchers";
 
 class App extends Component {
     constructor(props) {
@@ -12,9 +13,9 @@ class App extends Component {
         this.state = {
             personalDetails: {
                 name: "Ben Tucker",
-                title: "",
-                phone: "",
-                email: "",
+                title: "Software Developer",
+                phone: "778-555-5555",
+                email: "bwtucker4@gmail.com",
             },
             education: [],
             experience: [],
@@ -24,12 +25,15 @@ class App extends Component {
     }
 
     handleChange = (e) => {
-        this.setState({
+        const { name, value } = e.target;
+
+        this.setState((prevState) => ({
+            ...prevState,
             personalDetails: {
-                name: e.target.value,
+                ...prevState.personalDetails,
+                [name]: value,
             },
-        });
-        console.log("hi");
+        }));
     };
 
     render() {
@@ -41,7 +45,12 @@ class App extends Component {
                     <Work />
                 </div>
                 <div className="cv-display">
-                    <Resume />
+                    <Resume
+                        name={this.state.personalDetails.name}
+                        title={this.state.personalDetails.title}
+                        phone={this.state.personalDetails.phone}
+                        email={this.state.personalDetails.email}
+                    />
                 </div>
             </div>
         );
