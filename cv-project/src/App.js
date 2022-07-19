@@ -21,10 +21,10 @@ class App extends Component {
             experience: [],
         };
 
-        this.handleChange = this.handleChange.bind(this);
+        this.handlePersonalChange = this.handlePersonalChange.bind(this);
     }
 
-    handleChange = (e) => {
+    handlePersonalChange = (e) => {
         const { name, value } = e.target;
 
         this.setState((prevState) => ({
@@ -40,7 +40,7 @@ class App extends Component {
         return (
             <div className="container">
                 <div className="cv-form">
-                    <General onChange={this.handleChange} />
+                    <General onChange={this.handlePersonalChange} />
                     <Education />
                     <Work />
                 </div>
