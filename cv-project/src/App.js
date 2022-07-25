@@ -25,11 +25,21 @@ class App extends Component {
                     end: "Present",
                 },
             ],
-            experience: [],
+            experience: [
+                {
+                    company: "Toronto Research Chemicals",
+                    position: "Analytical Chemist",
+                    description:
+                        "Cupidatat sunt anim incididunt nisi labore sunt nulla Lorem elit irure.",
+                    start: "2020",
+                    end: "2021",
+                },
+            ],
         };
 
         this.handlePersonalChange = this.handlePersonalChange.bind(this);
         this.handleEducationChange = this.handleEducationChange.bind(this);
+        this.handleWorkChange = this.handleWorkChange.bind(this);
     }
 
     handlePersonalChange = (e) => {
@@ -57,13 +67,26 @@ class App extends Component {
         }));
     };
 
+    handleWorkChange = (e) => {
+        const { name, value } = e.target;
+
+        this.setState(({ experience }) => ({
+            experience: [
+                {
+                    ...experience[0],
+                    [name]: value,
+                },
+            ],
+        }));
+    };
+
     render() {
         return (
             <div className="container">
                 <div className="cv-form">
                     <General onChange={this.handlePersonalChange} />
                     <Education onChange={this.handleEducationChange} />
-                    <Work />
+                    <Work onChange={this.handleWorkChange} />
                 </div>
                 <div className="cv-display">
                     <Resume
@@ -72,6 +95,7 @@ class App extends Component {
                         phone={this.state.personalDetails.phone}
                         email={this.state.personalDetails.email}
                         education={this.state.education}
+                        experience={this.state.experience}
                     />
                 </div>
             </div>

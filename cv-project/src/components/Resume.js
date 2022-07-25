@@ -56,21 +56,17 @@ class Resume extends Component {
                     <h3>Work Experience</h3>
                     <div className="work-entry">
                         <div className="work-heading">
-                            <p>Analytical Chemist</p>
+                            <p>{this.props.experience[0].position}</p>
                             <p>
-                                Toronto Research Chemicals |{" "}
-                                <span>2020 - 2021</span>
+                                {this.props.experience[0].company} |{" "}
+                                <span>
+                                    {this.props.experience[0].start} -{" "}
+                                    {this.props.experience[0].end}
+                                </span>
                             </p>
                         </div>
                         <div className="work-details">
-                            Cupidatat sunt anim incididunt nisi labore sunt
-                            nulla Lorem elit irure. Aliquip quis excepteur et
-                            nostrud enim irure nostrud officia. Et deserunt et
-                            aliquip voluptate elit cupidatat. Adipisicing enim
-                            minim do anim eiusmod est. Irure laboris anim
-                            voluptate proident. Cillum reprehenderit est magna
-                            minim. Nostrud ex aute laborum ea irure amet ea
-                            ipsum ut non minim anim nisi.
+                            {this.props.experience[0].description}
                         </div>
                     </div>
                     <div className="work-entry">
