@@ -94,9 +94,9 @@ class Resume extends Component {
                     </div>
                 </section>
                 <footer>
-                    <p>Ben Tucker</p>
-                    <p>778-555-5555</p>
-                    <p>bwtucker4@gmail.com</p>
+                    <p>{this.props.name}</p>
+                    <p>{this.props.phone}</p>
+                    <p>{this.props.email}</p>
                 </footer>
             </div>
         );
