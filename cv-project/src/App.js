@@ -45,7 +45,16 @@ class App extends Component {
     };
 
     handleEducationChange = (e) => {
-        console.log("change");
+        const { name, value } = e.target;
+
+        this.setState(({ education }) => ({
+            education: [
+                {
+                    ...education[0],
+                    [name]: value,
+                },
+            ],
+        }));
     };
 
     render() {
