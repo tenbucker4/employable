@@ -29,6 +29,7 @@ class App extends Component {
         };
 
         this.handlePersonalChange = this.handlePersonalChange.bind(this);
+        this.handleEducationChange = this.handleEducationChange.bind(this);
     }
 
     handlePersonalChange = (e) => {
@@ -43,12 +44,16 @@ class App extends Component {
         }));
     };
 
+    handleEducationChange = (e) => {
+        console.log("change");
+    };
+
     render() {
         return (
             <div className="container">
                 <div className="cv-form">
                     <General onChange={this.handlePersonalChange} />
-                    <Education />
+                    <Education onChange={this.handleEducationChange} />
                     <Work />
                 </div>
                 <div className="cv-display">
