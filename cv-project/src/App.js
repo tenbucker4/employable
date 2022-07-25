@@ -17,7 +17,14 @@ class App extends Component {
                 phone: "778-555-5555",
                 email: "bwtucker4@gmail.com",
             },
-            education: [],
+            education: [
+                {
+                    degree: "Fullstack Javascript",
+                    school: "The Odin Project",
+                    start: "2022",
+                    end: "Present",
+                },
+            ],
             experience: [],
         };
 
@@ -50,6 +57,7 @@ class App extends Component {
                         title={this.state.personalDetails.title}
                         phone={this.state.personalDetails.phone}
                         email={this.state.personalDetails.email}
+                        education={this.state.education}
                     />
                 </div>
             </div>

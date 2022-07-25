@@ -30,9 +30,13 @@ class Resume extends Component {
                 <section className="education-section">
                     <h3>Education</h3>
                     <div className="education-entry">
-                        <p>Fullstack Javascript</p>
+                        <p>{this.props.education[0].degree}</p>
                         <p>
-                            The Odin Project | <span>2022 - Present</span>
+                            {this.props.education[0].school} |{" "}
+                            <span>
+                                {this.props.education[0].start} -{" "}
+                                {this.props.education[0].end}
+                            </span>
                         </p>
                     </div>
                     <div className="education-entry">
