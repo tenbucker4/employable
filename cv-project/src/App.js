@@ -94,14 +94,38 @@ class App extends Component {
                     <Work onChange={this.handleWorkChange} />
                 </div>
                 <div className="cv-display">
-                    <Resume
+                    <div className="resume-bin">
+                        <header>
+                            <div className="heading">
+                                <h1>{this.state.personalDetails.name}</h1>
+                                <h2>{this.state.personalDetails.title}</h2>
+                            </div>
+                            <div className="contact-details">
+                                <ul>
+                                    <li>
+                                        <img
+                                            src={require("./images/phone.png")}
+                                        />
+                                        {this.state.personalDetails.phone}
+                                    </li>
+                                    <li>
+                                        <img
+                                            src={require("./images/email.png")}
+                                        />
+                                        {this.state.personalDetails.email}
+                                    </li>
+                                </ul>
+                            </div>
+                        </header>
+                    </div>
+                    {/* <Resume
                         name={this.state.personalDetails.name}
                         title={this.state.personalDetails.title}
                         phone={this.state.personalDetails.phone}
                         email={this.state.personalDetails.email}
                         education={this.state.education}
                         experience={this.state.experience}
-                    />
+                    /> */}
                 </div>
             </div>
         );
