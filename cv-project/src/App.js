@@ -4,7 +4,7 @@ import Education from "./components/Education";
 import Work from "./components/Work";
 import Resume from "./components/Resume";
 import "./styles/app.css";
-import { toHaveStyle } from "@testing-library/jest-dom/dist/matchers";
+import uniqid from "uniqid";
 
 class App extends Component {
     constructor(props) {
@@ -23,6 +23,7 @@ class App extends Component {
                     school: "The Odin Project",
                     start: "2022",
                     end: "Present",
+                    id: uniqid(),
                 },
             ],
             experience: [
@@ -33,13 +34,15 @@ class App extends Component {
                         "Cupidatat sunt anim incididunt nisi labore sunt nulla Lorem elit irure.",
                     start: "2020",
                     end: "2021",
+                    id: uniqid(),
                 },
             ],
         };
 
-        this.handlePersonalChange = this.handlePersonalChange.bind(this);
-        this.handleEducationChange = this.handleEducationChange.bind(this);
-        this.handleWorkChange = this.handleWorkChange.bind(this);
+        // this.handlePersonalChange = this.handlePersonalChange.bind(this);
+        // this.handleEducationChange = this.handleEducationChange.bind(this);
+        // this.handleWorkChange = this.handleWorkChange.bind(this);
+        // ONLY NEED WHEN NOT USING ARROW FUNCTIONS
     }
 
     handlePersonalChange = (e) => {
@@ -52,6 +55,8 @@ class App extends Component {
                 [name]: value,
             },
         }));
+
+        console.log(this.state);
     };
 
     handleEducationChange = (e) => {

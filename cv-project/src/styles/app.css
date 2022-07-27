@@ -19,6 +19,14 @@
     gap: 2rem;
 }
 
+.general-form,
+.education-form,
+.work-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .cv-display {
     display: flex;
     justify-content: center;
