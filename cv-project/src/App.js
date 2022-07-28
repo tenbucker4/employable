@@ -90,7 +90,10 @@ class App extends Component {
             <div className="container">
                 <div className="cv-form">
                     <General onChange={this.handlePersonalChange} />
-                    <Education onChange={this.handleEducationChange} />
+                    <Education
+                        education={this.state.education}
+                        onChange={this.handleEducationChange}
+                    />
                     <Work onChange={this.handleWorkChange} />
                 </div>
                 <div className="cv-display">
