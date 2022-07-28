@@ -94,7 +94,10 @@ class App extends Component {
                         education={this.state.education}
                         onChange={this.handleEducationChange}
                     />
-                    <Work onChange={this.handleWorkChange} />
+                    <Work
+                        experience={this.state.experience}
+                        onChange={this.handleWorkChange}
+                    />
                 </div>
                 <div className="cv-display">
                     <Resume
