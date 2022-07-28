@@ -117,6 +117,24 @@ class App extends Component {
         }));
     };
 
+    handleEducationItemDelete = (property, index) => {
+        console.log(index);
+        console.log(this.state[property]);
+        this.setState((prevState) => ({
+            ...prevState,
+            [property]: [...prevState[property]].filter(
+                (item) => item.id !== index
+            ),
+        }));
+    };
+
+    getUniqueId = (property, index) => {
+        this.handleEducationItemDelete(
+            property,
+            this.state[property][index].id
+        );
+    };
+
     render() {
         return (
             <div className="container">
@@ -126,6 +144,8 @@ class App extends Component {
                         education={this.state.education}
                         onChange={this.handleEducationChange}
                         onAdd={this.handleEducationItemAdd}
+                        onDelete={this.handleEducationItemDelete}
+                        getID={this.getUniqueId}
                     />
                     <Work
                         experience={this.state.experience}

@@ -29,7 +29,7 @@ class Resume extends Component {
                 </header>
                 <section className="education-section">
                     <h3>Education</h3>
-                    {this.props.education.map((item, i) => {
+                    {this.props.education?.map((item, i) => {
                         return (
                             <div key={i} className="education-entry">
                                 <p>{item.degree}</p>

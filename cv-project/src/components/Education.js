@@ -67,7 +67,15 @@ class Education extends Component {
                                     )
                                 }
                             />
-                            <button>Delete</button>
+                            <button
+                                type="button"
+                                onClick={() => this.props.getID("education", i)}
+                                // onClick={() =>
+                                //     this.props.onDelete("education", i)
+                                // }
+                            >
+                                Delete
+                            </button>
                         </form>
                     );
                 })}
