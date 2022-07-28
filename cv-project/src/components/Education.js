@@ -17,7 +17,13 @@ class Education extends Component {
                                 type="text"
                                 name="school"
                                 defaultValue={item.school}
-                                onChange={this.props.onChange}
+                                onChange={(e) =>
+                                    this.props.onChange(
+                                        e.target.name,
+                                        e.target.value,
+                                        i
+                                    )
+                                }
                             />
                             <label htmlFor="degree">Degree</label>
                             <input
@@ -25,7 +31,13 @@ class Education extends Component {
                                 type="text"
                                 name="degree"
                                 defaultValue={item.degree}
-                                onChange={this.props.onChange}
+                                onChange={(e) =>
+                                    this.props.onChange(
+                                        e.target.name,
+                                        e.target.value,
+                                        i
+                                    )
+                                }
                             />
                             <label htmlFor="schoolStartDate">Start Year</label>
                             <input
@@ -33,7 +45,13 @@ class Education extends Component {
                                 type="text"
                                 name="start"
                                 defaultValue={item.start}
-                                onChange={this.props.onChange}
+                                onChange={(e) =>
+                                    this.props.onChange(
+                                        e.target.name,
+                                        e.target.value,
+                                        i
+                                    )
+                                }
                             />
                             <label htmlFor="schoolEndDate">End Year</label>
                             <input
@@ -41,13 +59,19 @@ class Education extends Component {
                                 type="text"
                                 name="end"
                                 defaultValue={item.end}
-                                onChange={this.props.onChange}
+                                onChange={(e) =>
+                                    this.props.onChange(
+                                        e.target.name,
+                                        e.target.value,
+                                        i
+                                    )
+                                }
                             />
                             <button>Delete</button>
                         </form>
                     );
                 })}
-                <button>Add Entry</button>
+                <button onClick={this.props.onAdd}>Add Entry</button>
             </div>
         );
     }

@@ -55,19 +55,18 @@ class App extends Component {
                 [name]: value,
             },
         }));
-
-        console.log(this.state);
     };
 
-    handleEducationChange = (e) => {
-        const { name, value } = e.target;
-
+    handleEducationChange = (name, value, i) => {
+        console.log(name, value, i);
         this.setState(({ education }) => ({
             education: [
+                ...education.slice(0, i),
                 {
-                    ...education[0],
+                    ...education[i],
                     [name]: value,
                 },
+                ...education.slice(i + 1),
             ],
         }));
     };
@@ -85,6 +84,23 @@ class App extends Component {
         }));
     };
 
+    handleEducationItemAdd = () => {
+        const id = uniqid();
+        this.setState((prevState) => ({
+            ...prevState,
+            education: [
+                ...prevState.education,
+                {
+                    id: id,
+                    school: "",
+                    degree: "",
+                    start: "",
+                    end: "",
+                },
+            ],
+        }));
+    };
+
     render() {
         return (
             <div className="container">
@@ -93,6 +109,7 @@ class App extends Component {
                     <Education
                         education={this.state.education}
                         onChange={this.handleEducationChange}
+                        onAdd={this.handleEducationItemAdd}
                     />
                     <Work
                         experience={this.state.experience}
