@@ -58,7 +58,6 @@ class App extends Component {
     };
 
     handleEducationChange = (name, value, i) => {
-        console.log(name, value, i);
         this.setState(({ education }) => ({
             education: [
                 ...education.slice(0, i),
@@ -71,15 +70,15 @@ class App extends Component {
         }));
     };
 
-    handleWorkChange = (e) => {
-        const { name, value } = e.target;
-
+    handleWorkChange = (name, value, i) => {
         this.setState(({ experience }) => ({
             experience: [
+                ...experience.slice(0, i),
                 {
-                    ...experience[0],
+                    ...experience[i],
                     [name]: value,
                 },
+                ...experience.slice(i + 1),
             ],
         }));
     };
@@ -101,6 +100,23 @@ class App extends Component {
         }));
     };
 
+    handleWorkItemAdd = () => {
+        const id = uniqid();
+        this.setState((prevState) => ({
+            ...prevState,
+            experience: [
+                ...prevState.experience,
+                {
+                    id: id,
+                    company: "",
+                    position: "",
+                    start: "",
+                    end: "",
+                },
+            ],
+        }));
+    };
+
     render() {
         return (
             <div className="container">
@@ -114,6 +130,7 @@ class App extends Component {
                     <Work
                         experience={this.state.experience}
                         onChange={this.handleWorkChange}
+                        onAdd={this.handleWorkItemAdd}
                     />
                 </div>
                 <div className="cv-display">

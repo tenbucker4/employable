@@ -17,7 +17,13 @@ class Work extends Component {
                                 type="text"
                                 name="company"
                                 defaultValue={item.company}
-                                onChange={this.props.onChange}
+                                onChange={(e) =>
+                                    this.props.onChange(
+                                        e.target.name,
+                                        e.target.value,
+                                        i
+                                    )
+                                }
                             />
                             <label htmlFor="position">Position</label>
                             <input
@@ -25,7 +31,13 @@ class Work extends Component {
                                 type="text"
                                 name="position"
                                 defaultValue={item.position}
-                                onChange={this.props.onChange}
+                                onChange={(e) =>
+                                    this.props.onChange(
+                                        e.target.name,
+                                        e.target.value,
+                                        i
+                                    )
+                                }
                             />
                             <label htmlFor="description">Description</label>
                             <textarea
@@ -33,7 +45,13 @@ class Work extends Component {
                                 name="description"
                                 rows={5}
                                 defaultValue={item.description}
-                                onChange={this.props.onChange}
+                                onChange={(e) =>
+                                    this.props.onChange(
+                                        e.target.name,
+                                        e.target.value,
+                                        i
+                                    )
+                                }
                             ></textarea>
                             <label htmlFor="workStartDate">Start Year</label>
                             <input
@@ -41,7 +59,13 @@ class Work extends Component {
                                 type="text"
                                 name="start"
                                 defaultValue={item.start}
-                                onChange={this.props.onChange}
+                                onChange={(e) =>
+                                    this.props.onChange(
+                                        e.target.name,
+                                        e.target.value,
+                                        i
+                                    )
+                                }
                             />
                             <label htmlFor="workEndDate">End Year</label>
                             <input
@@ -49,13 +73,19 @@ class Work extends Component {
                                 type="text"
                                 name="end"
                                 defaultValue={item.end}
-                                onChange={this.props.onChange}
+                                onChange={(e) =>
+                                    this.props.onChange(
+                                        e.target.name,
+                                        e.target.value,
+                                        i
+                                    )
+                                }
                             />
                             <button>Delete</button>
                         </form>
                     );
                 })}
-                <button>Add Entry</button>
+                <button onClick={this.props.onAdd}>Add Entry</button>
             </div>
         );
     }
