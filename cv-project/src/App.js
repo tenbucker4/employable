@@ -45,6 +45,7 @@ class App extends Component {
         // ONLY NEED WHEN NOT USING ARROW FUNCTIONS
     }
 
+    // Update state when personal details are changed
     handlePersonalChange = (e) => {
         const { name, value } = e.target;
 
@@ -57,6 +58,7 @@ class App extends Component {
         }));
     };
 
+    // Update state when education details are changed
     handleEducationChange = (name, value, i) => {
         this.setState(({ education }) => ({
             education: [
@@ -70,6 +72,7 @@ class App extends Component {
         }));
     };
 
+    // Update state when work details are changed
     handleWorkChange = (name, value, i) => {
         this.setState(({ experience }) => ({
             experience: [
@@ -83,6 +86,7 @@ class App extends Component {
         }));
     };
 
+    // Add entry to education array in state when new entry is populated
     handleEducationItemAdd = () => {
         const id = uniqid();
         this.setState((prevState) => ({
@@ -100,6 +104,7 @@ class App extends Component {
         }));
     };
 
+    // Add entry to work array in state when new entry is populated
     handleWorkItemAdd = () => {
         const id = uniqid();
         this.setState((prevState) => ({
@@ -117,18 +122,17 @@ class App extends Component {
         }));
     };
 
+    // Delete selected item from education/experience array
     handleEducationItemDelete = (property, index) => {
-        console.log(index);
-        console.log(this.state[property]);
         this.setState((prevState) => ({
             ...prevState,
             [property]: [...prevState[property]].filter(
                 (item) => item.id !== index
             ),
         }));
-        console.log(this.state[property]);
     };
 
+    // Get unique ID of item to be deleted
     getUniqueId = (property, index) => {
         this.handleEducationItemDelete(
             property,
