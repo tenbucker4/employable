@@ -71,9 +71,6 @@ class Education extends Component {
                             <button
                                 type="button"
                                 onClick={() => this.props.getID("education", i)}
-                                // onClick={() =>
-                                //     this.props.onDelete("education", i)
-                                // }
                             >
                                 Delete
                             </button>

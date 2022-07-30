@@ -152,6 +152,8 @@ class App extends Component {
                         experience={this.state.experience}
                         onChange={this.handleWorkChange}
                         onAdd={this.handleWorkItemAdd}
+                        onDelete={this.handleEducationItemDelete}
+                        getID={this.getUniqueId}
                     />
                 </div>
                 <div className="cv-display">
