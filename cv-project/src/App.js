@@ -126,6 +126,7 @@ class App extends Component {
                 (item) => item.id !== index
             ),
         }));
+        console.log(this.state[property]);
     };
 
     getUniqueId = (property, index) => {

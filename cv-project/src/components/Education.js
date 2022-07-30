@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import uniqid from "uniqid";
 
 class Education extends Component {
     constructor(props) {
@@ -10,7 +11,7 @@ class Education extends Component {
             <div className="education-form">
                 {this.props.education?.map((item, i) => {
                     return (
-                        <form key={i}>
+                        <form key={uniqid()}>
                             <label htmlFor="school">School</label>
                             <input
                                 id="school"
