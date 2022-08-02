@@ -11,7 +11,7 @@ class Work extends Component {
             <div className="work-form">
                 {this.props.experience?.map((item, i) => {
                     return (
-                        <form key={uniqid()}>
+                        <form key={item.id}>
                             <label htmlFor="company">Company</label>
                             <input
                                 id="company"

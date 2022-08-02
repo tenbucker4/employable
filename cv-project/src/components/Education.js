@@ -11,7 +11,7 @@ class Education extends Component {
             <div className="education-form">
                 {this.props.education?.map((item, i) => {
                     return (
-                        <form key={uniqid()}>
+                        <form key={item.id}>
                             <label htmlFor="school">School</label>
                             <input
                                 id="school"
