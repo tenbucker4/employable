@@ -32,7 +32,7 @@ class Resume extends Component {
                     {this.props.education?.map((item, i) => {
                         return (
                             <div key={i} className="education-entry">
-                                <p>{item.degree}</p>
+                                <p id="degree-title">{item.degree}</p>
                                 <p>
                                     {item.school} |{" "}
                                     <span>
@@ -49,7 +49,7 @@ class Resume extends Component {
                         return (
                             <div key={i} className="work-entry">
                                 <div className="work-heading">
-                                    <p>{item.position}</p>
+                                    <p id="position-title">{item.position}</p>
                                     <p>
                                         {item.company} |{" "}
                                         <span>

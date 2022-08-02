@@ -1,6 +1,14 @@
+:root {
+    --dark-blue: #195c70;
+    --grey: #5e5e5e;
+    --light-blue: #81aebb;
+    --blue: #377ea4;
+}
+
 .resume-bin {
-    width: 90%;
-    height: 70vh;
+    width: 595px;
+    height: 842px;
+    padding: 50px 50px 15px 50px;
     border: 1px solid black;
     display: flex;
     flex-direction: column;
@@ -10,9 +18,9 @@
 .resume-bin header {
     display: flex;
     justify-content: space-between;
-    width: 90%;
-    padding: 1.5rem 0rem;
-    border-bottom: 3px solid blue;
+    width: 100%;
+    padding-bottom: 1.5rem;
+    border-bottom: 3px solid var(--light-blue);
 }
 
 .heading {
@@ -21,8 +29,13 @@
     gap: 0.5rem;
 }
 
+.heading h1 {
+    color: var(--dark-blue);
+}
+
 .heading h2 {
-    color: rgb(84, 83, 83);
+    color: var(--grey);
+    font-weight: 100;
 }
 
 ul {
@@ -44,14 +57,23 @@ li img {
 section {
     display: flex;
     flex-direction: column;
-    width: 90%;
+    width: 100%;
     padding-top: 1.5rem;
     gap: 0.5rem;
+}
+
+section h3 {
+    color: var(--dark-blue);
 }
 
 .education-entry {
     display: flex;
     justify-content: space-between;
+}
+
+#degree-title,
+#position-title {
+    font-weight: 600;
 }
 
 .work-section {
@@ -73,13 +95,17 @@ section {
     text-align: justify;
 }
 
+span {
+    font-weight: 600;
+}
+
 footer {
     justify-content: center;
-    width: 90%;
+    width: 100%;
     margin-top: auto;
     display: flex;
     gap: 1rem;
     padding: 0.5rem 0rem;
     color: rgb(84, 83, 83);
-    border-top: 1px solid blue;
+    border-top: 2px solid var(--light-blue);
 }
