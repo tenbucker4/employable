@@ -3,6 +3,7 @@ import General from "./components/General";
 import Education from "./components/Education";
 import Work from "./components/Work";
 import Resume from "./components/Resume";
+import ColorPicker from "./components/ColorPicker";
 import "./styles/app.css";
 import uniqid from "uniqid";
 
@@ -25,6 +26,20 @@ class App extends Component {
                     end: "Present",
                     id: uniqid(),
                 },
+                {
+                    degree: "M.Sc Chemistry",
+                    school: "Queen's University",
+                    start: "2019",
+                    end: "2020",
+                    id: uniqid(),
+                },
+                {
+                    degree: "B.Sc Chemistry (Honours)",
+                    school: "Queen's University",
+                    start: "2014",
+                    end: "2019",
+                    id: uniqid(),
+                },
             ],
             experience: [
                 {
@@ -37,6 +52,24 @@ class App extends Component {
                     id: uniqid(),
                 },
             ],
+            colors: {
+                blue: {
+                    dark: "#195c70",
+                    light: "#81aebb",
+                },
+                green: {
+                    dark: "rgb(0, 78, 26)",
+                    light: "rgb(122, 182, 141)",
+                },
+                red: {
+                    dark: "rgb(129, 2, 2)",
+                    light: "rgb(229, 172, 172)",
+                },
+                black: {
+                    dark: "black",
+                    light: "rgb(147, 146, 146)",
+                },
+            },
         };
 
         // this.handlePersonalChange = this.handlePersonalChange.bind(this);
@@ -140,6 +173,19 @@ class App extends Component {
         );
     };
 
+    handleColorChange = (color) => {
+        document.getElementById("name-title").style.color =
+            this.state.colors[color].dark;
+        document.querySelector("header").style.borderBottom =
+            "3px solid " + this.state.colors[color].light;
+        document.getElementById("education-title").style.color =
+            this.state.colors[color].dark;
+        document.getElementById("work-title").style.color =
+            this.state.colors[color].dark;
+        document.querySelector("footer").style.borderTop =
+            "2px solid " + this.state.colors[color].light;
+    };
+
     render() {
         return (
             <div className="container">
@@ -170,6 +216,7 @@ class App extends Component {
                         experience={this.state.experience}
                     />
                 </div>
+                <ColorPicker onClick={this.handleColorChange} />
             </div>
         );
     }

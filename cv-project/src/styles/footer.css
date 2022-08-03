@@ -1,0 +1,10 @@
+.footer-buttons {
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.color-picker {
+    display: flex;
+    gap: 1rem;
+}

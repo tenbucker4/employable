@@ -11,7 +11,7 @@ class Resume extends Component {
             <div className="resume-bin">
                 <header>
                     <div className="heading">
-                        <h1>{this.props.name}</h1>
+                        <h1 id="name-title">{this.props.name}</h1>
                         <h2>{this.props.title}</h2>
                     </div>
                     <div className="contact-details">
@@ -28,7 +28,7 @@ class Resume extends Component {
                     </div>
                 </header>
                 <section className="education-section">
-                    <h3>Education</h3>
+                    <h3 id="education-title">Education</h3>
                     {this.props.education?.map((item, i) => {
                         return (
                             <div key={i} className="education-entry">
@@ -44,7 +44,7 @@ class Resume extends Component {
                     })}
                 </section>
                 <section className="work-section">
-                    <h3>Work Experience</h3>
+                    <h3 id="work-title">Work Experience</h3>
                     {this.props.experience.map((item, i) => {
                         return (
                             <div key={i} className="work-entry">
