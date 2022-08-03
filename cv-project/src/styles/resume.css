@@ -71,11 +71,6 @@ section h3 {
     justify-content: space-between;
 }
 
-#degree-title,
-#position-title {
-    font-weight: 600;
-}
-
 .work-section {
     gap: 1rem;
 }

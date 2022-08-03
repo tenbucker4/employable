@@ -14,7 +14,7 @@
 
 .color-picker button {
     border-radius: 100%;
-    border: 2px solid black;
+    border: 1px solid black;
     height: 2rem;
     width: 2rem;
 }
