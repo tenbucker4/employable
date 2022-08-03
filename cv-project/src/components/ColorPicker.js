@@ -9,33 +9,34 @@ class ColorPicker extends Component {
     render() {
         return (
             <div className="footer-buttons">
+                <h4>Choose a color theme:</h4>
                 <div className="color-picker">
                     <button
                         id="blue"
+                        className="active"
                         onClick={(e) => this.props.onClick(e.target.id)}
-                    >
-                        Blue
-                    </button>
+                    ></button>
                     <button
                         id="green"
                         onClick={(e) => this.props.onClick(e.target.id)}
-                    >
-                        Green
-                    </button>
+                    ></button>
                     <button
                         id="red"
                         onClick={(e) => this.props.onClick(e.target.id)}
-                    >
-                        Red
-                    </button>
+                    ></button>
                     <button
                         id="black"
                         onClick={(e) => this.props.onClick(e.target.id)}
+                    ></button>
+                </div>
+                <div className="pdf-bin">
+                    <button
+                        className="download"
+                        onClick={this.props.onPdfClick}
                     >
-                        Black
+                        Download
                     </button>
                 </div>
-                <div className="pdf-bin"></div>
             </div>
         );
     }

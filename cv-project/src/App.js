@@ -6,6 +6,7 @@ import Resume from "./components/Resume";
 import ColorPicker from "./components/ColorPicker";
 import "./styles/app.css";
 import uniqid from "uniqid";
+import JsPDF from "jspdf";
 
 class App extends Component {
     constructor(props) {
@@ -186,6 +187,13 @@ class App extends Component {
             "2px solid " + this.state.colors[color].light;
     };
 
+    generatePDF = () => {
+        const report = new JsPDF("portrait", "pt", "a4");
+        report.html(document.querySelector(".resume-bin")).then(() => {
+            report.save("report.pdf");
+        });
+    };
+
     render() {
         return (
             <div className="container">
@@ -215,8 +223,11 @@ class App extends Component {
                         education={this.state.education}
                         experience={this.state.experience}
                     />
+                    <ColorPicker
+                        onClick={this.handleColorChange}
+                        onPdfClick={this.generatePDF}
+                    />
                 </div>
-                <ColorPicker onClick={this.handleColorChange} />
             </div>
         );
     }
