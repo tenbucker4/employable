@@ -197,8 +197,11 @@ class App extends Component {
     render() {
         return (
             <div className="container">
+                <h1>Hired</h1>
                 <div className="cv-form">
+                    <h3>Personal Details</h3>
                     <General onChange={this.handlePersonalChange} />
+                    <h3>Education</h3>
                     <Education
                         education={this.state.education}
                         onChange={this.handleEducationChange}
@@ -206,6 +209,7 @@ class App extends Component {
                         onDelete={this.handleEducationItemDelete}
                         getID={this.getUniqueId}
                     />
+                    <h3>Work Experience</h3>
                     <Work
                         experience={this.state.experience}
                         onChange={this.handleWorkChange}

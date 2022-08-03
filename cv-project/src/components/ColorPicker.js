@@ -9,7 +9,6 @@ class ColorPicker extends Component {
     render() {
         return (
             <div className="footer-buttons">
-                <h4>All done?</h4>
                 <h4>Choose a color theme:</h4>
                 <div className="color-picker">
                     <button
