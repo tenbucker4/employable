@@ -14,13 +14,12 @@ body {
     font-size: 0.8rem;
     font-weight: 300;
     font-family: "Montserrat", sans-serif;
-    background-color: rgb(176, 212, 243);
 }
 
 .title-div {
     display: flex;
     align-items: center;
-    padding-top: 1rem;
+    padding-top: 1.5rem;
     gap: 0.5rem;
 }
 
@@ -76,13 +75,17 @@ textarea {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 45%;
+    width: 595px;
+    background-color: rgb(176, 212, 243);
+    border-radius: 5px;
+    padding-top: 0.5rem;
 }
 
 .cv-form h3 {
     align-self: flex-start;
     padding-bottom: 0.25rem;
     padding-top: 1rem;
+    padding-left: 2.7rem;
     font-size: 1.1rem;
 }
 
@@ -92,7 +95,7 @@ textarea {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: 85%;
     gap: 1.5rem;
     padding-bottom: 1.25rem;
 }
@@ -132,5 +135,9 @@ form {
 @media (max-width: 640px) {
     .cv-form {
         width: 80%;
+    }
+
+    .cv-form h3 {
+        align-self: center;
     }
 }

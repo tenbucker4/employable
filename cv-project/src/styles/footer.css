@@ -35,6 +35,6 @@
     background-color: black;
 }
 
-.active {
-    border: 2px solid black;
+.download {
+    border: 1px solid var(--dark-blue);
 }
