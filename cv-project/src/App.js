@@ -192,7 +192,7 @@ class App extends Component {
     generatePDF = () => {
         const report = new JsPDF("portrait", "pt", "a4");
         report.html(document.querySelector(".resume-bin")).then(() => {
-            report.save("report.pdf");
+            report.save("resume.pdf");
         });
     };
 

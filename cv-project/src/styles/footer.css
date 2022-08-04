@@ -13,7 +13,7 @@
 }
 
 .color-picker button {
-    border-radius: 100%;
+    border-radius: 5px;
     border: 1px solid black;
     height: 2rem;
     width: 2rem;
@@ -24,11 +24,11 @@
 }
 
 #blue {
-    background-color: blue;
+    background-color: rgb(0, 157, 255);
 }
 
 #green {
-    background-color: green;
+    background-color: rgb(90, 194, 90);
 }
 
 #black {

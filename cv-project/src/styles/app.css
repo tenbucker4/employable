@@ -76,7 +76,7 @@ textarea {
     flex-direction: column;
     align-items: center;
     width: 595px;
-    background-color: rgb(176, 212, 243);
+    background-color: #d0eafb;
     border-radius: 5px;
     padding-top: 0.5rem;
 }
