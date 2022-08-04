@@ -139,5 +139,6 @@ form {
 
     .cv-form h3 {
         align-self: center;
+        padding-left: 0;
     }
 }
