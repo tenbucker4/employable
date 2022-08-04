@@ -49,7 +49,7 @@ class Work extends Component {
                                 <textarea
                                     id="description"
                                     name="description"
-                                    rows={5}
+                                    rows={6}
                                     defaultValue={item.description}
                                     onChange={(e) =>
                                         this.props.onChange(

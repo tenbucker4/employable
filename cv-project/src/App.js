@@ -21,7 +21,7 @@ class App extends Component {
             },
             education: [
                 {
-                    degree: "Fullstack Javascript",
+                    degree: "Javascript",
                     school: "The Odin Project",
                     start: "2022",
                     end: "Present",
@@ -185,6 +185,8 @@ class App extends Component {
             this.state.colors[color].dark;
         document.querySelector("footer").style.borderTop =
             "2px solid " + this.state.colors[color].light;
+
+        document.querySelector(".resume-bin").scrollIntoView();
     };
 
     generatePDF = () => {
@@ -197,7 +199,13 @@ class App extends Component {
     render() {
         return (
             <div className="container">
-                <h1>Hired</h1>
+                <div className="title-div">
+                    <h1 className="main-title">Hired</h1>
+                    <img
+                        id="title-image"
+                        src={require("./images/green-check-mark.jpg")}
+                    />
+                </div>
                 <div className="cv-form">
                     <h3>Personal Details</h3>
                     <General onChange={this.handlePersonalChange} />

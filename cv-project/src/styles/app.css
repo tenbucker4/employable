@@ -6,10 +6,31 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-size: 0.8rem;
     font-weight: 300;
     font-family: "Montserrat", sans-serif;
+    background-color: rgb(176, 212, 243);
+}
+
+.title-div {
+    display: flex;
+    align-items: center;
+    padding-top: 1rem;
+    gap: 0.5rem;
+}
+
+.main-title {
+    font-size: 2rem;
+}
+
+#title-image {
+    height: 3rem;
+    width: auto;
 }
 
 button {
@@ -18,12 +39,12 @@ button {
     padding: 0.25rem;
     background-color: white;
     color: black;
-    border: 1px solid black;
+    border: none;
     border-radius: 5px;
 }
 
 button:hover {
-    background-color: black;
+    background-color: var(--dark-blue);
     color: white;
 }
 
@@ -32,18 +53,15 @@ input {
 }
 
 input {
-    border: 1px solid grey;
     border-radius: 5px;
 }
 
 input,
 textarea {
+    border: none;
     font-family: inherit;
     resize: none;
-}
-
-textarea {
-    border: 1px solid grey;
+    text-indent: 4px;
     border-radius: 5px;
 }
 
@@ -108,4 +126,11 @@ form {
     justify-content: center;
     align-items: center;
     width: 100%;
+}
+
+/* Responsiveness */
+@media (max-width: 640px) {
+    .cv-form {
+        width: 80%;
+    }
 }

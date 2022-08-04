@@ -7,13 +7,14 @@
 
 .resume-bin {
     width: 595px;
-    height: 841px;
+    aspect-ratio: 1 / 1.41;
     padding: 50px 50px 15px 50px;
     border: 0.5px solid black;
     display: flex;
     flex-direction: column;
     align-items: center;
     box-shadow: 3px 0 3px 0 hsl(0deg 0% 0% / 20%);
+    background-color: white;
 }
 
 .resume-bin header {
@@ -48,6 +49,7 @@ li {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    word-wrap: break-word;
 }
 
 li img {
@@ -89,7 +91,6 @@ section h3 {
 
 .work-details {
     text-align: justify;
-    overflow: auto;
 }
 
 span {
@@ -105,4 +106,21 @@ footer {
     padding: 0.5rem 0rem;
     color: rgb(84, 83, 83);
     border-top: 2px solid var(--light-blue);
+}
+
+/* Responsiveness */
+@media (max-width: 640px) {
+    .resume-bin {
+        width: 90%;
+        font-size: 0.6rem;
+    }
+
+    li img {
+        width: 0.8rem;
+        height: auto;
+    }
+
+    .cv-form {
+        width: 80%;
+    }
 }
