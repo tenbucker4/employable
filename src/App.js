@@ -200,7 +200,7 @@ class App extends Component {
         return (
             <div className="container">
                 <div className="title-div">
-                    <h1 className="main-title">Employed</h1>
+                    <h1 className="main-title">Employable</h1>
                     <img
                         id="title-image"
                         src={require("./images/green-check-mark.jpg")}
