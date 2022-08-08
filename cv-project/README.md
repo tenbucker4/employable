@@ -1,1 +1,0 @@
-Employed is a custom resume builder built in ReactJS. Users can edit and add personal information, education and work experience to a pre-formatted resume, which is automatically updated at the bottom of the page. Custom color themes can be selected and users can download their final resume as a PDF.
